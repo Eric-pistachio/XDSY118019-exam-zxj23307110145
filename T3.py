@@ -2,7 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-a = 1.4
+a = np.linspace(0, 100, 100)
 b = 0.3
 x0, y0 = 0, 0
 N = int(input("Input N.\n"))
@@ -16,7 +16,6 @@ for i in range(N):
 x = u[:, 0]
 y = u[:, 1]
 print(x)
-print(y)
 
 plt.plot(x, y, 'r-o')
 # 添加标题和标签
