@@ -17,28 +17,3 @@ for i in range(N):
     u[i+1] = np.array([1 - a * u[i][0]**2 + u[i][1], b * u[i][0]])
     
 print(u)
-
-#T2
-a = 1.4
-b = 0.3
-x0, y0 = 0, 0
-
-x = u[:, 0]
-y = u[:, 1]
-print(x)
-print(y)
-
-import matplotlib.pyplot as plt
-plt.plot(x, y, 'r-o')
-# 添加标题和标签
-plt.title('Line Graph')
-plt.xlabel('x axis')
-plt.ylabel('y axis')
-
-# 显示图例
-# plt.legend([''])
-
-# 显示网格
-plt.grid(True)
-
-plt.show()

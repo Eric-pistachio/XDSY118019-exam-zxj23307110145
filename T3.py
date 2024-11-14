@@ -2,6 +2,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+def Henon_map (a, b, x0, y0, N):
+    
+
+
 a_range = 2
 
 a = np.linspace(0, a_range, a_range)
