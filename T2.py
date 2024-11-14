@@ -20,7 +20,7 @@ print(y)
 
 plt.plot(x, y, 'r-o')
 # 添加标题和标签
-# plt.title('Line Graph')
+plt.title('N = %d' % N)
 plt.xlabel('x axis')
 plt.ylabel('y axis')
 

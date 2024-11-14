@@ -2,31 +2,32 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-a = np.linspace(0, 100, 100)
+a_range = 2
+
+a = np.linspace(0, a_range, a_range)
+
 b = 0.3
 x0, y0 = 0, 0
-N = int(input("Input N.\n"))
+N = 3
 
-u = np.zeros((N+1, 2))
-u[0] = np.array([x0, y0])
-print(u[0])
-for i in range(N):
-    u[i+1] = np.array([1 - a * u[i][0]**2 + u[i][1], b * u[i][0]])
+u = np.zeros((a_range, N+1, 2))
+for j in range(a_range):
+    u[j, 0] = np.array([x0, y0])
+print(u)
 
-x = u[:, 0]
-y = u[:, 1]
-print(x)
+# for j in range(a_range):
+#     for i in range(N):
+#         u[j][i+1] = np.array([1 - a[j] * u[i][0]**2 + u[i][1], b * u[i][0]])
 
-plt.plot(x, y, 'r-o')
-# 添加标题和标签
-# plt.title('Line Graph')
-plt.xlabel('x axis')
-plt.ylabel('y axis')
+# x = np.linspace(0, a_range, a_range)
+# x = u[N, 0]
+# print(x)
 
-# 显示图例
-# plt.legend([''])
+# plt.plot(a, x, 'r-x')
+# plt.xlabel('a')
+# plt.ylabel('x')
 
-# 显示网格
-plt.grid(True)
+# # 显示网格
+# plt.grid(True)
 
-plt.show()
+# plt.show()
