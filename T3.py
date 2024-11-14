@@ -1,27 +1,28 @@
 #T2
+#为什么a>-23，x会恒等于0？
 import numpy as np
 import matplotlib.pyplot as plt
 
-def Henon_map (a, b, x0, y0, N):
+def Henon_map (a_in_f, b, x0, y0, N):
     u = np.zeros((N+1, 2))
     u[0] = np.array([x0, y0])
     for i in range(N):
-        u[i+1] = np.array([1 - a * u[i][0]**2 + u[i][1], b * u[i][0]])
+        u[i+1] = np.array([1 - a_in_f * u[i][0]**2 + u[i][1], b * u[i][0]])
     return u
 
 #main:
-a_range = 100
+a_range = 50
+points = 200
 
-a = np.linspace(-a_range, a_range, 2 * a_range+1)
+a = np.linspace(-a_range, a_range, points) 
 
 b = 0.3
-x0, y0 = 0,0
+x0, y0 = -2,2
 N = 20
 
-x = np.linspace(0, a_range, 2 * a_range+1)
-for i in range(a_range):
+x = np.zeros(points)
+for i in range(points): ##这里有问题，不是a_range，而应该是points!!
     x[i] = Henon_map(a[i], b, x0, y0, N)[N, 0]
-    # y[i] = Henon_map(a[i], b, x0, y0, N)[N-1, 1]
 
 print(a)
 print(x)
