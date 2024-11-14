@@ -9,7 +9,8 @@
 
 #T1
 import numpy as np
-a, b, x0, y0, N = list(map(int, input("Input a, b, x0, y0, N with a space.\n").split()))
+b = 0.3
+a, x0, y0, N = list(map(int, input("Input a, b, x0, y0, N with a space.\n").split()))
 u = np.zeros((N+1, 2))
 u[0] = np.array([x0, y0])
 print(u[0])
