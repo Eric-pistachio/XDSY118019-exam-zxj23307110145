@@ -9,7 +9,7 @@
 
 #T1
 import numpy as np
-a = 7.5
+a = 0.2512562814070307
 b = 0.3
 x0, y0, N = list(map(int, input("Input a, b, x0, y0, N with a space.\n").split()))
 u = np.zeros((N+1, 2))

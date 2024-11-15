@@ -17,8 +17,8 @@ points = 200
 a = np.linspace(-a_range, a_range, points) 
 
 b = 0.3
-x0, y0 = -2,2
-N = 20
+x0, y0 = 0,0
+N = 100
 
 x = np.zeros(points)
 for i in range(points): ##这里有问题，不是a_range，而应该是points!!
@@ -26,6 +26,10 @@ for i in range(points): ##这里有问题，不是a_range，而应该是points!!
 
 print(a)
 print(x)
+
+
+print('a =', a[np.argmin(np.abs(x))])
+print('x =', x[np.argmin(np.abs(x))])
 
 #下面是画图
 
