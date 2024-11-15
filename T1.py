@@ -1,12 +1,3 @@
-#hello
-#题目分析：
-#第一题是简单的迭代计算
-#第二题“探索 N 的取值，求解得到的轨迹”什么意思？，加一个画图matplotlib
-#第三题：作图
-#第四题：找到Hénon map可以收敛到⼀条周期性轨道的 a 值，计算轨迹，绘图
-#用到：matplotlib, numpy？, sympy？
-
-
 #T1
 import numpy as np
 a = 0.2512562814070307
